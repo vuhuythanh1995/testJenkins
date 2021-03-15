@@ -9,7 +9,8 @@ pipeline {
     }
     post {
         always{
-            echo "OK"
+            echo 'OK'
+            emailext body: '', subject: '$(DEFAULT_SUBJECT)', to: 'vhthanh.uhd@gmail.com'
         }
     }
 }
